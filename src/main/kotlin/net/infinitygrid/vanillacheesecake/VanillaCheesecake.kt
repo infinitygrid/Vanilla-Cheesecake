@@ -17,6 +17,7 @@ class VanillaCheesecake : JavaPlugin() {
     }
 
     override fun onEnable() {
+        pluginManager.registerEvents(EndPortalRestriction(), this)
         logger.log(Level.INFO, "Plugin has been enabled!")
     }
 
