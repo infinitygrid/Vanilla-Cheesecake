@@ -1,0 +1,6 @@
+name: VanillaCheesecake
+author: Cuube
+version: 1.0
+
+api-version: 1.16
+main: net.infinitygrid.vanillacheesecake.VanillaCheesecake
