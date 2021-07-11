@@ -7,4 +7,3 @@ main: net.infinitygrid.vanillacheesecake.VanillaCheesecake
 
 depend:
   - Mercury
-  -
