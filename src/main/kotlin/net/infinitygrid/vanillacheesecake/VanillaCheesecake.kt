@@ -1,29 +1,20 @@
 package net.infinitygrid.vanillacheesecake
 
-import org.bukkit.Bukkit
-import org.bukkit.plugin.java.JavaPlugin
-import java.util.logging.Level
+import net.infinitygrid.mercury.MercuryPluginLoader
 
-class VanillaCheesecake : JavaPlugin() {
+class VanillaCheesecake : MercuryPluginLoader() {
 
     companion object {
         lateinit var instance: VanillaCheesecake
     }
 
-    private val pluginManager = Bukkit.getPluginManager()
-
-    override fun onLoad() {
+    override fun onPluginLoad() {
         instance = this
     }
 
-    override fun onEnable() {
-        pluginManager.registerEvents(EndPortalRestriction(), this)
+    override fun onPluginEnable() {
+        registerListener(EndPortalRestriction())
         InvisibleItemFrame()
-        logger.log(Level.INFO, "Plugin has been enabled!")
-    }
-
-    override fun onDisable() {
-        logger.log(Level.INFO, "Plugin has been disabled.")
     }
 
 }
